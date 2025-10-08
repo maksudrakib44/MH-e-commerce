@@ -772,6 +772,46 @@ button {
     background: transparent;
     border: 1px solid var(--primary);
     color: var(--primary);
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: 0.65rem;
+    white-space: nowrap;
+    min-width: 0;
+    flex: 1;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+    .wishlist-btn {
+        padding: 6px 6px;
+        font-size: 0.6rem;
+        gap: 2px;
+    }
+    
+    .wishlist-btn i {
+        font-size: 0.7rem;
+    }
+}
+
+/* Ensure product actions container doesn't overflow */
+.product-actions {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+}
+
+.product-actions button {
+    flex: 1;
     padding: 6px 4px;
     border-radius: 4px;
     font-weight: 600;
@@ -782,6 +822,9 @@ button {
     gap: 3px;
     font-size: 0.7rem;
     white-space: nowrap;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .wishlist-btn:hover {
