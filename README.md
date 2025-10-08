@@ -2,7 +2,6 @@
 
 ![MH E-Commerce](https://img.shields.io/badge/MH--E--Commerce-Live%20Demo-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
 
 A modern, responsive e-commerce web application built with pure HTML, CSS, and JavaScript. Features a clean design, mobile-first approach, and seamless shopping experience.
 
