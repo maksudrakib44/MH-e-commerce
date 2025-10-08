@@ -89,13 +89,13 @@ button {
     color: white;
 }
 
-/* Header Styles - MOBILE FIRST APPROACH */
+/* Header Styles */
 .top-bar {
     background: var(--dark);
     color: white;
     padding: 8px 0;
     font-size: 0.85rem;
-    display: none; /* Hidden on mobile by default */
+    display: none;
 }
 
 .top-links {
@@ -154,7 +154,6 @@ button {
     color: var(--secondary);
 }
 
-/* Mobile Search Toggle */
 .mobile-search-toggle {
     display: none;
     background: none;
@@ -187,7 +186,7 @@ button {
     background: var(--light-gray);
     padding: 0 12px;
     border-right: 1px solid var(--border);
-    display: none; /* Hidden on mobile */
+    display: none;
 }
 
 .search-category select {
@@ -283,15 +282,9 @@ button {
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .mobile-menu {
@@ -360,7 +353,7 @@ button {
     background: var(--primary);
 }
 
-/* Hero Slider - MOBILE FIRST - IMPROVED */
+/* Hero Slider */
 .hero-slider {
     padding: 15px 0;
     background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
@@ -464,7 +457,6 @@ button {
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 /*
 .slider-controls {
     position: absolute;
@@ -740,8 +732,7 @@ button {
     font-size: 0.7rem;
 }
 
-  /* Product buttons design */
-/* Product buttons design - FIXED */
+/* Product Actions - FIXED */
 .product-actions {
     display: flex;
     gap: 6px;
@@ -769,80 +760,25 @@ button {
 }
 
 .add-to-cart {
-    background: #f57224;
+    background: var(--primary);
     color: white;
-    border: 1px solid #f57224;
+    border: 1px solid var(--primary);
 }
 
 .add-to-cart:hover {
-    background: #e55c00;
-    border-color: #e55c00;
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
 }
 
 .wishlist-btn {
     background: transparent;
-    border: 1px solid #f57224;
-    color: #f57224;
+    border: 1px solid var(--primary);
+    color: var(--primary);
 }
 
 .wishlist-btn:hover {
-    background: #f57224;
+    background: var(--primary);
     color: white;
-}
-
-/* Tablet and smaller screens */
-@media (max-width: 768px) {
-    .product-actions button {
-        padding: 7px 5px;
-        font-size: 0.7rem;
-        gap: 3px;
-    }
-}
-
-/* Mobile phones */
-@media (max-width: 480px) {
-    .product-actions button {
-        padding: 6px 4px;
-        font-size: 0.65rem;
-        gap: 2px;
-    }
-}
-
-/* Small mobile phones */
-@media (max-width: 400px) {
-    .product-actions button {
-        padding: 5px 3px;
-        font-size: 0.6rem;
-        gap: 2px;
-    }
-    
-    /* Replace long text with shorter versions */
-    .add-to-cart .btn-text,
-    .wishlist-btn .btn-text {
-        display: none;
-    }
-    
-    
-    .wishlist-btn::after {
-        content: "Wish";
-    }
-}
-
-/* Extra small mobile phones */
-@media (max-width: 360px) {
-    .product-actions button {
-        padding: 4px 2px;
-        font-size: 0.55rem;
-        gap: 1px;
-    }
-    
-    .add-to-cart::after {
-        content: "Cart";
-    }
-    
-    .wishlist-btn::after {
-        content: "♥";
-    }
 }
 
 /* Categories */
@@ -1422,11 +1358,6 @@ footer {
         font-size: 0.9rem;
         height: 38px;
     }
-    
-    .product-actions button {
-        font-size: 0.72rem;
-        padding: 6px 4px;
-    }
 }
 
 /* Medium phones (576px - 767px) */
@@ -1672,5 +1603,51 @@ footer {
     
     .search-box {
         max-width: 600px;
+    }
+}
+
+/* Mobile-specific fixes for Add to Cart button */
+@media (max-width: 480px) {
+    .product-actions button {
+        padding: 7px 5px;
+        font-size: 0.7rem;
+        gap: 3px;
+    }
+}
+
+@media (max-width: 400px) {
+    .product-actions button {
+        padding: 6px 4px;
+        font-size: 0.65rem;
+        gap: 2px;
+    }
+    
+    .add-to-cart .btn-text,
+    .wishlist-btn .btn-text {
+        display: none;
+    }
+    
+    .add-to-cart::after {
+        content: "Add Cart";
+    }
+    
+    .wishlist-btn::after {
+        content: "Wish";
+    }
+}
+
+@media (max-width: 360px) {
+    .product-actions button {
+        padding: 5px 3px;
+        font-size: 0.6rem;
+        gap: 2px;
+    }
+    
+    .add-to-cart::after {
+        content: "Cart";
+    }
+    
+    .wishlist-btn::after {
+        content: "♥";
     }
 }
