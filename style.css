@@ -1627,9 +1627,7 @@ footer {
         display: none;
     }
     
-    .add-to-cart::after {
-        content: "Add Cart";
-    }
+
     
     .wishlist-btn::after {
         content: "Wish";
