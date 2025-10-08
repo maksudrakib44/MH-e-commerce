@@ -1,4 +1,4 @@
-/* CSS Styles
+/* CSS Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -739,8 +739,8 @@ button {
     color: var(--gray);
     font-size: 0.7rem;
 }
-/* Additional CSS for button fixes */
 
+  /* Product buttons design */
 .product-actions {
     display: flex;
     gap: 6px;
@@ -764,7 +764,6 @@ button {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 1.2;
 }
 
 .add-to-cart {
@@ -776,7 +775,6 @@ button {
 .add-to-cart:hover {
     background: #e55c00;
     border-color: #e55c00;
-    transform: translateY(-1px);
 }
 
 .wishlist-btn {
@@ -788,35 +786,26 @@ button {
 .wishlist-btn:hover {
     background: #f57224;
     color: white;
-    transform: translateY(-1px);
 }
 
-/* Tablet and smaller desktop */
-@media (max-width: 768px) {
+/* For small screens */
+@media (max-width: 480px) {
     .product-actions button {
-        padding: 7px 5px;
-        font-size: 0.7rem;
+        padding: 7px 4px;
+        font-size: 0.65rem;
         gap: 3px;
     }
 }
 
-/* Mobile phones */
-@media (max-width: 480px) {
+/* For very small screens */
+@media (max-width: 360px) {
     .product-actions button {
-        padding: 6px 4px;
-        font-size: 0.65rem;
-        gap: 2px;
-    }
-}
-
-/* Small mobile phones */
-@media (max-width: 400px) {
-    .product-actions button {
-        padding: 5px 3px;
-        font-size: 0.62rem;
+        padding: 6px 3px;
+        font-size: 0.6rem;
         gap: 2px;
     }
     
+    /* Use shorter text on very small screens */
     .add-to-cart span,
     .wishlist-btn span {
         display: none;
@@ -831,31 +820,6 @@ button {
     }
 }
 
-/* Extra small mobile phones */
-@media (max-width: 360px) {
-    .product-actions button {
-        padding: 4px 2px;
-        font-size: 0.6rem;
-        gap: 1px;
-    }
-    
-    .add-to-cart::after {
-        content: "Cart";
-    }
-    
-    .wishlist-btn::after {
-        content: "♥";
-    }
-}
-
-/* Large screens optimization */
-@media (min-width: 1200px) {
-    .product-actions button {
-        padding: 10px 8px;
-        font-size: 0.8rem;
-        gap: 5px;
-    }
-}
 /* Categories */
 .categories {
     padding: 30px 0;
