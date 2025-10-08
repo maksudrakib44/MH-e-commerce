@@ -812,7 +812,7 @@ button {
     }
     
     .add-to-cart::after {
-        content: "Add Cart";
+        content: "";
     }
     
     .wishlist-btn::after {
