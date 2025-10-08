@@ -762,6 +762,7 @@ button {
     min-width: 0;
     max-width: 100%;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .add-to-cart {
@@ -803,22 +804,18 @@ button {
         gap: 2px;
     }
     
-    /* Optional: Use icons only on very small screens */
-    .product-actions button span:not(.icon) {
+    /* Use shorter text on very small screens */
+    .add-to-cart span:first-child,
+    .wishlist-btn span:first-child {
         display: none;
     }
     
-    .product-actions button::before {
-        content: attr(data-short);
-        display: inline;
-    }
-    
-    .add-to-cart::before {
+    .add-to-cart::after {
         content: "Cart";
     }
     
-    .wishlist-btn::before {
-        content: "♥";
+    .wishlist-btn::after {
+        content: "Wish";
     }
 }
 /* Categories */
