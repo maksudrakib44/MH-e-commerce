@@ -755,13 +755,13 @@ button {
     align-items: center;
     justify-content: center;
     gap: 3px;
-    font-size: 0.7rem;
     white-space: nowrap;
 }
 
 .add-to-cart {
     background: var(--primary);
     color: white;
+    font-size: 0.4rem;
 }
 
 .add-to-cart:hover {
