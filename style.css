@@ -749,20 +749,19 @@ button {
 
 .product-actions button {
     flex: 1;
-    padding: 6px 8px;
+    padding: 8px 6px;
     border-radius: 4px;
     font-weight: 600;
     transition: var(--transition);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3px;
-    font-size: 0.7rem;
+    gap: 4px;
+    font-size: 0.75rem;
     white-space: nowrap;
     min-width: 0;
     max-width: 100%;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .add-to-cart {
@@ -787,15 +786,41 @@ button {
     color: white;
 }
 
-/* For very small screens */
-@media (max-width: 360px) {
+/* For small screens */
+@media (max-width: 480px) {
     .product-actions button {
-        padding: 6px 6px;
-        font-size: 0.65rem;
-        gap: 2px;
+        padding: 7px 4px;
+        font-size: 0.7rem;
+        gap: 3px;
     }
 }
 
+/* For very small screens */
+@media (max-width: 360px) {
+    .product-actions button {
+        padding: 6px 3px;
+        font-size: 0.65rem;
+        gap: 2px;
+    }
+    
+    /* Optional: Use icons only on very small screens */
+    .product-actions button span:not(.icon) {
+        display: none;
+    }
+    
+    .product-actions button::before {
+        content: attr(data-short);
+        display: inline;
+    }
+    
+    .add-to-cart::before {
+        content: "Cart";
+    }
+    
+    .wishlist-btn::before {
+        content: "♥";
+    }
+}
 /* Categories */
 .categories {
     padding: 30px 0;
