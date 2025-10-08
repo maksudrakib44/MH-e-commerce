@@ -741,6 +741,7 @@ button {
 }
 
   /* Product buttons design */
+/* Product buttons design - FIXED */
 .product-actions {
     display: flex;
     gap: 6px;
@@ -764,6 +765,7 @@ button {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 1;
 }
 
 .add-to-cart {
@@ -788,35 +790,61 @@ button {
     color: white;
 }
 
-/* For small screens */
-@media (max-width: 480px) {
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
     .product-actions button {
-        padding: 7px 4px;
-        font-size: 0.65rem;
+        padding: 7px 5px;
+        font-size: 0.7rem;
         gap: 3px;
     }
 }
 
-/* For very small screens */
-@media (max-width: 360px) {
+/* Mobile phones */
+@media (max-width: 480px) {
     .product-actions button {
-        padding: 6px 3px;
+        padding: 6px 4px;
+        font-size: 0.65rem;
+        gap: 2px;
+    }
+}
+
+/* Small mobile phones */
+@media (max-width: 400px) {
+    .product-actions button {
+        padding: 5px 3px;
         font-size: 0.6rem;
         gap: 2px;
     }
     
-    /* Use shorter text on very small screens */
-    .add-to-cart span,
-    .wishlist-btn span {
+    /* Replace long text with shorter versions */
+    .add-to-cart .btn-text,
+    .wishlist-btn .btn-text {
         display: none;
     }
     
     .add-to-cart::after {
-        content: "";
+        content: "Add Cart";
     }
     
     .wishlist-btn::after {
         content: "Wish";
+    }
+}
+
+/* Extra small mobile phones */
+@media (max-width: 360px) {
+    .product-actions button {
+        padding: 4px 2px;
+        font-size: 0.55rem;
+        gap: 1px;
+    }
+    
+    .add-to-cart::after {
+        content: "Cart";
+    }
+    
+    .wishlist-btn::after {
+        content: "♥";
     }
 }
 
